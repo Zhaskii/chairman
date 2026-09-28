@@ -19,6 +19,8 @@ import {
   Home,
 } from "lucide-react";
 import { CHAIRMAN_DATA } from "@/data/content";
+import Image from "next/image";
+import chairman from "@/public/images/ARKSH-CHAIRMAN.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -179,9 +181,11 @@ export default function Navbar() {
             href="#home"
             className="flex items-center gap-2 sm:gap-2.5 group shrink-0 whitespace-nowrap"
           >
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-tr from-[#01356b] to-[#0154A5] text-white flex items-center justify-center font-black text-xs sm:text-sm shadow-sm group-hover:scale-105 transition-transform duration-200">
-              RKS
-            </div>
+            <Image
+              src={chairman}
+              alt="Arksh Chairman logo"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl object-contain shadow-sm group-hover:scale-105 transition-transform duration-200"
+            />
             <div className="flex flex-col">
               <span
                 className={

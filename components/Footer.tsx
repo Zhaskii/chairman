@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
+import chairman from "@/public/images/ARKSH-CHAIRMAN.png";
 import {
   Mail,
   Phone,
@@ -62,9 +64,11 @@ export default function Footer() {
           <div className="space-y-6 lg:col-span-1">
             {/* Monogram + Name */}
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-[#01356b] to-[#0154A5] text-white flex items-center justify-center font-black text-base shadow-lg shrink-0">
-                RKS
-              </div>
+              <Image
+                src={chairman}
+                alt="Arksh Chairman logo"
+                className="w-12 h-12 rounded-xl object-contain shadow-lg shrink-0"
+              />
               <div>
                 <h3 className="text-base font-black tracking-tight text-white leading-tight">
                   Dr. Rajesh Kazi Shrestha
